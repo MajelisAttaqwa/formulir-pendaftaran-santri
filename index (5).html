@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Santri — At-Taqwa</title>
+  <link rel="icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <header class="kop">
+      <div class="logo-ring">
+        <img src="logo.png" alt="Logo Majelis Ta'lim Wal Mudzakarah At-Taqwa" class="logo">
+      </div>
+      <p class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</p>
+      <h1>Formulir Pendaftaran Santri</h1>
+      <p class="majelis">Majelis Ta'lim Wal Mudzakarah At-Taqwa</p>
+      <p class="alamat">📍 Jl. Taman Muara, Bogor</p>
+    </header>
+
+    <form id="formDaftar" class="card" novalidate>
+
+      <!-- ========== BAGIAN I ========== -->
+      <section>
+        <div class="bagian-title"><span class="num">I</span> Data Santri</div>
+
+        <div class="field">
+          <label for="namaLengkap">Nama lengkap santri <b>*</b></label>
+          <input id="namaLengkap" name="namaLengkap" type="text" placeholder="Contoh: Ahmad Fauzi Rahman" required>
+        </div>
+
+        <div class="field">
+          <label for="namaPanggilan">Nama panggilan <b>*</b></label>
+          <input id="namaPanggilan" name="namaPanggilan" type="text" placeholder="Contoh: Fauzi" required>
+        </div>
+
+        <div class="field">
+          <label for="tempatLahir">Tempat lahir <b>*</b></label>
+          <input id="tempatLahir" name="tempatLahir" type="text" placeholder="Contoh: Bogor" required>
+        </div>
+
+        <div class="field">
+          <label>Tanggal lahir <b>*</b></label>
+          <div class="tgl-grid">
+            <select id="tglHari" name="tglHari" required aria-label="Tanggal"></select>
+            <select id="tglBulan" name="tglBulan" required aria-label="Bulan"></select>
+            <select id="tglTahun" name="tglTahun" required aria-label="Tahun"></select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="jenisKelamin">Jenis kelamin <b>*</b></label>
+          <select id="jenisKelamin" name="jenisKelamin" required>
+            <option value="">— Pilih —</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="alamat">Alamat lengkap santri <b>*</b></label>
+          <textarea id="alamat" name="alamat" rows="3" placeholder="Jalan, RT/RW, kelurahan, kecamatan, kota" required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="pendidikan">Pendidikan formal saat ini <b>*</b></label>
+          <select id="pendidikan" name="pendidikan" required>
+            <option value="">— Pilih —</option>
+            <option value="PAUD">PAUD</option>
+            <option value="TK">TK</option>
+            <option value="SD">SD</option>
+            <option value="SMP">SMP</option>
+            <option value="SMA">SMA</option>
+            <option value="Lulus sekolah / Kuliah / Kerja">Lulus sekolah / Kuliah / Kerja</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- ========== BAGIAN II ========== -->
+      <section>
+        <div class="bagian-title"><span class="num">II</span> Data Orang Tua / Wali</div>
+
+        <div class="field">
+          <label for="namaAyah">Nama ayah <b>*</b></label>
+          <input id="namaAyah" name="namaAyah" type="text" required>
+        </div>
+
+        <div class="field">
+          <label for="namaIbu">Nama ibu <b>*</b></label>
+          <input id="namaIbu" name="namaIbu" type="text" required>
+        </div>
+
+        <div class="field">
+          <label for="pekerjaanAyah">Pekerjaan ayah <b>*</b></label>
+          <input id="pekerjaanAyah" name="pekerjaanAyah" type="text" required>
+        </div>
+
+        <div class="field">
+          <label for="pekerjaanIbu">Pekerjaan ibu <b>*</b></label>
+          <input id="pekerjaanIbu" name="pekerjaanIbu" type="text" required>
+        </div>
+
+        <div class="field">
+          <label for="noWa">No WhatsApp orang tua untuk komunikasi <b>*</b></label>
+          <input id="noWa" name="noWa" type="tel" inputmode="tel" placeholder="Contoh: 081234567890" required>
+          <small>Nomor aktif untuk komunikasi dari Majelis.</small>
+        </div>
+      </section>
+
+      <button type="submit" id="btnKirim" class="btn-kirim">Kirim Pendaftaran</button>
+      <p class="footnote">Data yang Anda isi dijaga kerahasiaannya oleh Majelis.</p>
+    </form>
+
+    <footer class="footer">
+      <p class="arab">أهلاً وسهلاً بكم في Majelis At-Taqwa</p>
+    </footer>
+  </main>
+
+  <!-- Konfirmasi setelah jawaban terkirim -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTeks">
+    <div class="modal-box">
+      <div class="check">✓</div>
+      <p id="modalTeks" class="modal-teks">Jawaban berhasil dikirim</p>
+      <p id="modalNo" class="modal-no"></p>
+      <button id="btnTutup" type="button" class="btn-kirim">Tutup</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
