@@ -4,7 +4,7 @@
    ========================================================== */
 
 // ⚠️ GANTI dengan URL Web App dari Apps Script (berakhiran /exec)
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/GANTI_DENGAN_ID_DEPLOYMENT/exec';
+const APPS_SCRIPT_URL = '   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/GANTI_DENGAN_ID_DEPLOYMENT/exec';';
 
 const BULAN = ['Januari','Februari','Maret','April','Mei','Juni','Juli',
                'Agustus','September','Oktober','November','Desember'];
